@@ -1,5 +1,7 @@
 var fs = require('fs');
 
+var filename = process.argv[2];
 var buffer = fs.readFileSync(process.argv[2]);
+var msgs = buffer.toString().split('\n');
 
-var msgs = buffer.toString().split();
+console.log(msgs.length - 1);
